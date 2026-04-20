@@ -1,3 +1,81 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+/* ── Google Fonts ── */
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=DM+Sans:wght@400;500;600&display=swap');
+
+/* ── Global Reset & Variables ── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg-main:     #0d1526;
+  --bg-sidebar:  #0d1526;
+  --bg-card:     #111d35;
+  --bg-row-alt:  #0f1a30;
+  --border:      #1e3058;
+  --accent-gold: #f5a623;
+  --accent-red:  #e84b6a;
+  --accent-blue: #1e3a6e;
+  --text-primary:   #c8d8f0;
+  --text-secondary: #7a9cc4;
+  --text-header:    #4e9de0;
+  --nav-active-bg:  #1e3a6e;
+  --status-ok:      #2ecc71;
+  --status-low:     #f5a623;
+  --status-out:     #e84b6a;
+  --font-display: 'Rajdhani', sans-serif;
+  --font-body:    'DM Sans', sans-serif;
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--bg-main);
+  color: var(--text-primary);
+  min-height: 100vh;
+}
+
+/* ── App Shell ── */
+.app-shell {
+  display: flex;
+  min-height: 100vh;
+}
+
+.app-content {
+  flex: 1;
+  padding: 28px 32px;
+  background: var(--bg-main);
+}
+
+.placeholder-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 60vh;
+  gap: 12px;
+  color: var(--text-secondary);
+  font-family: var(--font-display);
+}
+
+.placeholder-page h2 {
+  font-size: 2rem;
+  color: var(--text-header);
+}
+
+/* ── Dashboard ── */
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.dashboard__stats {
+  display: flex;
+  gap: 20px;
+}
+
+@media (max-width: 640px) {
+  .dashboard__stats { flex-direction: column; }
+}

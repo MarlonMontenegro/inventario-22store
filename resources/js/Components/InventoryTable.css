@@ -1,0 +1,183 @@
+.inv-wrapper { display: flex; flex-direction: column; gap: 0; }
+
+/* ── Toolbar ── */
+.inv-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 16px 0 14px;
+  flex-wrap: wrap;
+}
+
+.inv-toolbar__left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+/* Search */
+.inv-search {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.inv-search__icon {
+  position: absolute;
+  left: 12px;
+  font-size: 0.85rem;
+  pointer-events: none;
+}
+
+.inv-search__input {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  font-size: 0.87rem;
+  padding: 9px 34px 9px 34px;
+  width: 240px;
+  outline: none;
+  transition: border-color 0.18s;
+}
+
+.inv-search__input:focus { border-color: var(--text-header); }
+.inv-search__input::placeholder { color: var(--text-secondary); }
+
+.inv-search__clear {
+  position: absolute;
+  right: 10px;
+  background: none;
+  border: none;
+  color: var(--text-secondary);
+  cursor: pointer;
+  font-size: 0.75rem;
+  padding: 2px 4px;
+  border-radius: 4px;
+}
+
+.inv-search__clear:hover { color: var(--accent-red); }
+
+/* Filter selects */
+.inv-filter-select {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  font-size: 0.87rem;
+  padding: 9px 14px;
+  outline: none;
+  cursor: pointer;
+  transition: border-color 0.18s;
+}
+
+.inv-filter-select:focus { border-color: var(--text-header); }
+.inv-filter-select option { background: var(--bg-card); }
+
+/* Add button */
+.btn-add {
+  background: var(--text-header);
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  font-weight: 600;
+  padding: 9px 20px;
+  cursor: pointer;
+  letter-spacing: 0.03em;
+  transition: background 0.18s, transform 0.12s;
+}
+
+.btn-add:hover { background: #2d82c8; transform: translateY(-1px); }
+
+/* ── Table ── */
+.inv-table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+}
+
+.inv-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+}
+
+.inv-table thead tr { background: var(--bg-card); }
+
+.inv-table th {
+  padding: 14px 20px;
+  text-align: left;
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-header);
+  letter-spacing: 0.04em;
+  border-bottom: 1px solid var(--border);
+}
+
+.inv-table td {
+  padding: 14px 20px;
+  color: var(--text-primary);
+  border-bottom: 1px solid var(--border);
+}
+
+.inv-table tbody tr:last-child td { border-bottom: none; }
+.inv-table tbody tr { background: transparent; transition: background 0.12s; }
+.inv-table tbody tr:hover { background: var(--accent-blue); }
+.inv-table__row--alt { background: var(--bg-row-alt); }
+.inv-table__row--alt:hover { background: var(--accent-blue); }
+
+.inv-table__name { font-weight: 500; }
+
+.inv-table__empty {
+  text-align: center;
+  color: var(--text-secondary);
+  padding: 40px 0;
+  font-style: italic;
+}
+
+/* Category tag */
+.cat-tag {
+  background: rgba(30,58,110,0.6);
+  border-radius: 5px;
+  color: var(--text-header);
+  font-size: 0.78rem;
+  padding: 3px 9px;
+  letter-spacing: 0.03em;
+}
+
+/* Stock coloring */
+.stock--low { color: var(--accent-gold); font-weight: 600; }
+.stock--out { color: var(--accent-red);  font-weight: 700; }
+
+/* Action buttons */
+.inv-table__actions { display: flex; gap: 6px; }
+
+.btn-edit, .btn-delete {
+  background: none;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  padding: 5px 9px;
+  transition: background 0.15s, border-color 0.15s;
+}
+
+.btn-edit:hover   { background: rgba(30,58,110,0.8); border-color: var(--text-header); }
+.btn-delete:hover { background: rgba(232,75,106,0.15); border-color: var(--accent-red); }
+
+/* Count */
+.inv-count {
+  padding: 10px 4px 0;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  text-align: right;
+}

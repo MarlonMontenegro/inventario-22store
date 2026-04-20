@@ -1,0 +1,37 @@
+.stat-card {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 28px 20px;
+  border-radius: 6px;
+  border: 2px solid var(--accent-gold);
+  background: transparent;
+  min-width: 0;
+  transition: transform 0.15s;
+}
+
+.stat-card:hover { transform: translateY(-2px); }
+
+.stat-card--warning { border-color: var(--accent-gold); }
+.stat-card--danger  { border-color: var(--accent-red); }
+
+.stat-card__value {
+  font-family: var(--font-display);
+  font-size: 3.2rem;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--accent-gold);
+}
+
+.stat-card--danger .stat-card__value { color: var(--accent-red); }
+
+.stat-card__label {
+  margin-top: 10px;
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}

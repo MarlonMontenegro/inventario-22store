@@ -1,0 +1,19 @@
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.dashboard__stats {
+  display: flex;
+  gap: 20px;
+}
+
+.dashboard__table-section {
+  /* table fills the remaining width */
+}
+
+/* Responsive: stack cards on small screens */
+@media (max-width: 640px) {
+  .dashboard__stats { flex-direction: column; }
+}
